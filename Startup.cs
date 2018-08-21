@@ -28,7 +28,7 @@ namespace DotNetCoreSqlDb
             services.AddMvc();
 
             services.AddDbContext<MyDatabaseContext>(options =>
-                    options.UseSqlServer(Configuration. GetConnectionString(“MyDbConnection”)); 
+                    options.UseSqlServer(Configuration.GetConnectionString(“MyDbConnection”))); 
                                                      
             // Automatically perform database migration 
             services.BuildServiceProvider().GetService<MyDatabaseContext>().Database.Migrate();
